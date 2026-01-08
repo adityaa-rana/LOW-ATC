@@ -1,36 +1,67 @@
-```mermaid
-flowchart TD
+# Customer Retention & Personalization System (D2C)
 
-    A[Total Sessions<br/>1,082,718]
-    A --> B[COHORT<br/>New User + Landing Page = Product page<br/>465,497]
+## 📌 Overview
+This project focuses on building a **real-world Customer Retention and Personalization system** using the **Direct-to-Consumer (D2C) database of Kerala Ayurveda**, developed during my internship.  
+The system is designed as a **multi-stage production pipeline** to understand user behavior, predict retention, and personalize recommendations.
 
-    %% ATC vs Non-ATC
-    B --> C[ATC Sessions<br/>38,311]
-    B --> D[Non-ATC Sessions<br/>407,634]
+---
 
-    %% ATC breakdown
-    C --> C1[Single-page sessions<br/>17,589]
-    C --> C2[Multi-page sessions<br/>20,722]
+## 🎯 Objectives
+The system is structured across **three production phases**:
 
-    %% Non-ATC -> Bounce vs No-Bounce
-    D --> E[Bounce sessions<br/>173,716]
-    D --> F[No-Bounce sessions<br/>253,316]
+1. **User Return Prediction**  
+   Predict whether a customer is likely to return in the future.
 
-    %% =========================
-    %% Parallel categorizations
-    %% =========================
+2. **Return Time Estimation**  
+   Estimate the expected time window for the user’s next return.
 
-    %% View 1: Page depth classification
-    F --> P[View 1: Page depth]
-    P --> F1[Single-page sessions<br/>194,246]
-    P --> F2[Multi-page sessions<br/>59,070]
+3. **Product Category Recommendation**  
+   Recommend the most probable product category based on user behavior and historical patterns.
 
-    %% View 2: Return behavior classification
-    F --> R[View 2: Return behavior]
-    R --> G[Return user sessions<br/>7,965]
-    R --> H[No return user sessions<br/>245,351]
+---
 
-    %% Return users -> ATC outcome
-    G --> G1[ATC on return session<br/>398 users]
-    G --> G2[No ATC on return session<br/>7,573 users]
+## 🗂️ Data & Feature Engineering
+- Worked with **raw relational D2C tables** containing user, session, product, and interaction-level data.
+- Performed extensive **data cleaning, preprocessing, and feature engineering** to build ML-ready datasets.
+- Addressed real-world challenges including:
+  - Feature dominance
+  - Class imbalance
+  - Noise in user behavior data
+  - Overfitting in predictive models
 
+---
+
+## 🤖 Modeling & Pipeline
+- Trained and evaluated **multiple machine learning models** for each phase of the pipeline.
+- Achieved up to **92% prediction accuracy** across key tasks.
+- Designed the system as a **production-ready ML pipeline**, ensuring modularity and scalability.
+
+---
+
+## 📈 Impact
+- Improved **customer retention by 6.5%**
+- Increased **funnel conversion rate by 1.6%**
+- Enabled data-driven personalization for D2C users
+
+---
+
+## 🛠️ Tech Stack
+- **Programming:** Python  
+- **Data Handling:** Pandas, NumPy  
+- **Machine Learning:** Scikit-learn, XGBoost  
+- **Visualization:** Matplotlib, Seaborn  
+- **Data Querying:** SQL  
+
+---
+
+## 🚀 Key Learnings
+- Translating business problems into ML objectives in real-world datasets
+- Handling noisy, imbalanced D2C data at scale
+- Building end-to-end ML pipelines suitable for production environments
+- Extracting behavioral insights to drive personalization strategies
+
+---
+
+## 📎 Notes
+This project was developed as part of an internship using real production data.  
+Sensitive business data has been anonymized or excluded where applicable.
